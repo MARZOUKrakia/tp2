@@ -74,6 +74,7 @@ public class TestMyUndecoratedJavaFXWindow {
     @Disabled
     @Test
     public void should_initialize_stage_is_not_resizable() {
+        assertFalse(stage.isResizable());
     }
 
     @Disabled
