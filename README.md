@@ -212,7 +212,7 @@ La taille de la fenêtre se définit rarement directement comme dans cet exercic
 #### Exercice 5
 
 Modifiez le code de l'application qui vous est donné de manière à changer le style de la fenêtre pour qu'elle ne soit 
-pas décorée (rechercher parmi les méthodes relatives à du style). Ajoutez les propriétés que les test vous imposent pour être totalement validées.
+pas décorée (recherchez parmi les méthodes relatives à du style). Ajoutez les propriétés que les tests vous imposent pour être totalement validées.
 
 Puisqu'elle n'est plus décorée, la fenêtre qui s'affiche ne dispose plus du bouton permettant de terminer l'application !
 Néanmoins, sur un bureau comme le vôtre qui dispose d'une barre de tâches, un simple clic droit sur l'icône 
@@ -244,7 +244,7 @@ respectant les contraintes suivantes :
 
 - Au centre de ce `BorderPane`, placez un `Label` (voir la documentation de cette classe) ayant pour `text` la chaîne `Hello !`
 
-- Ce label doit avoir pour `Id` la valeur `"labelHello"`
+- Ce label doit avoir pour `Id` la valeur `"labelHello"` (attention, sans `#`) ; ici encore, vous pouvez utiliser un setter
 
 - La fenêtre doit être visible
 
@@ -289,29 +289,29 @@ respectant les contraintes suivantes :
 Exécutez l'application pour vérifier le fonctionnement de cette fenêtre. Comme pour l'exercice précédent, vous devez 
 activer les tests les uns après les autres et soumettre votre solution après chaque itération du cycle principal du workflow.
 
+#### Exercice 9
 
 Bien que le bouton soit un peu plus attrayant, il n'est pour l'instant pas très interactif. Généralement, l'utilisateur 
 s'attend à ce qu'un bouton lance un traitement lorsqu'on l'actionne. Pour ce faire, Java permet de réagir aux événements 
-avec le mécanisme des écouteurs (`Listener`). Dans les exercices qui suivent nous allons voir plusieurs solutions pour 
+avec le mécanisme des écouteurs (`Listener`). Dans les exercices qui suivent, nous allons voir plusieurs solutions pour 
 implémenter ce mécanisme.
 
-#### Exercice 9
 D'un point de vue purement technique, un `Listener` est un objet qui implémente l'interface 
-[`EventHandler<T extends Event>`](https://docs.oracle.com/javase/8/javafx/api/javafx/event/EventHandler.html). Cette 
+[`EventHandler<T extends Event>`](https://openjfx.io/javadoc/11/javafx.base/javafx/event/EventHandler.html). Cette 
 interface possède une unique méthode appelée `handle()` qui sera appelée lorsqu'un événement se produit.
 
 Pour qu'un *écouteur* soit appelé au bon moment (lorsqu'un événement est déclenché par une action extérieure), il faut 
 qu'il s'enregistre auprès de l'objet qu'il souhaite écouter. Pour la classe `Button`, c'est la méthode `setOnAction()` 
 qui permet à un écouteur de s'enregistrer pour être informé quand le bouton est actionné.
 
-Ouvrez donc les classes `HelloBeatifulUsefulButton` et `EcouteurSimple`, puis implémentez les en respectant les 
+Ouvrez donc les classes `HelloBeautifulUsefulButton` et `EcouteurSimple`, puis implémentez-les en respectant les 
 contraintes suivantes :
 
 - La classe `EcouteurSimple` doit implémenter l'interface `EventHandler<ActionEvent>`
 
 - La méthode `handle()` de cette classe se contente d'afficher le texte "Bouton actionné" sur la sortie standard.
 
-- La classe `HelloBeatifulUsefulButton` doit respecter les même contraintes que `HelloBeautifulButton`.
+- La classe `HelloBeautifulUsefulButton` doit respecter les même contraintes que `HelloBeautifulButton`.
 
 - Le bouton doit ajouter une instance de la classe `EcouteurSimple` comme écouteur
 
@@ -331,7 +331,7 @@ ou concrète.
 
 **Syntaxe :**
 ```java
-Type var=new Type(param1,param2...) {
+Type var = new Type(param1,param2...) {
  //(re)définition de membres
  //(méthode/champs/classe)
 };
@@ -347,7 +347,7 @@ EventHandler<ActionEvent> ecouteur = new EventHandler<ActionEvent>() {
 };
 ```
 
-Ouvrez donc la classe `HelloBeatifulUsefulButton` (du paquetage `exercice10`) et implémentez la en respectant les 
+Ouvrez donc la classe `HelloBeautifulUsefulButton` (du paquetage `exercice10`) et implémentez-la en respectant les 
 contraintes suivantes :
 
 - L'écouteur d'événement du bouton devra être une classe anonyme qui implémente `EventHandler<ActionEvent>`
@@ -357,7 +357,7 @@ La valeur *x* doit correspondre au nombre de fois que le bouton a été actionn�
 
 - L'objet créé ainsi doit être enregistré comme écouteur du bouton
 
-- La classe `HelloBeatifulUsefulButton` doit respecter les mêmes contraintes que `HelloBeautifulButton`
+- La classe `HelloBeautifulUsefulButton` doit respecter les mêmes contraintes que `HelloBeautifulButton`
 
 - Rendre visible la fenêtre
 
@@ -381,11 +381,11 @@ Et c’est ce qui permet d’implémenter facilement les expressions lambda. Ave
 demande au compilateur de vérifier que l’interface possède bien une seule méthode abstraite. C’est le même principe 
 que l'annotation `@Override`, vue précédemment dans l’implémentation de nos différentes opérations. La seule condition 
 pour que l’affectation d’une expression lambda à une variable (d’une interface fonctionnelle) soit possible est que, 
-la signature de la méthode abstraite de l’interface fonctionnelle doit "matcher" (correspondre à) celle de l’expression 
+la signature de la méthode abstraite de l’interface fonctionnelle doit correspondre à ("matcher") celle de l’expression 
 lambda. Pour simplifier la compréhension, on peut imaginer que l’expression lambda est une implémentation de l’interface 
 fonctionnelle.
 
-Une expression lambda comprend trois (3) parties :
+Une expression lambda comprend trois parties :
 
 - son(ses) paramètre(s), entre parenthèses et séparés par une virgule quand il y en a plusieurs
 
@@ -393,13 +393,11 @@ Une expression lambda comprend trois (3) parties :
 
 - son corps (le code exécuté).
 
-
 Par exemple dans le cas de l'interface fonctionnelle `EventHandler<T>`, on pourrait écrire la lambda suivante pour faire 
 le même traitement que celui attendu à l'exercice 9 :
 ```java
 EventHandler<ActionEvent> ecouteur = event -> System.out.println("Bouton actionné");
 ```
-
 Cette expression lambda se décompose comme suit : 
 - `event` est le seul paramètre de l'expression. Il n'est donc pas nécessaire de l'encadrer de parenthèses. Il correspond 
 au paramètre de la méthode de l'interface fonctionnelle associée. Dans notre cas, `event` sera donc du type `ActionEvent`.
@@ -411,9 +409,9 @@ au paramètre de la méthode de l'interface fonctionnelle associée. Dans notre 
  encadrer d'accolades (bloc d'instructions).
 
 
-Ouvrez la classe `HelloBeatifulUsefulButton` et implémentez la en respectant les contraintes suivantes :
+Ouvrez la classe `HelloBeautifulUsefulButton` et implémentez-la en respectant les contraintes suivantes :
 
-- La classe `HelloBeatifulUsefulButton` doit respecter les mêmes contraintes que `HelloBeatifulUsefulButton` du paquetage `exercice10`.
+- La classe `HelloBeautifulUsefulButton` doit respecter les mêmes contraintes que `HelloBeautifulUsefulButton` du paquetage `exercice10`.
 
 - L'écouteur d'événement devra être écrit en utilisant le mécanisme des expressions lambda.
 
@@ -470,10 +468,10 @@ Dans le Paquetage `exercice12`, ouvrir la classe `Palette` et l'implémenter en 
 
 - Pour vous simplifier la vie, vous pouvez instancier toutes les données membres lors de leur déclaration.
 
-- Le panneau central doit avoir une taille préférée de 400 par 200 (regarder dans la documentation de la classe `Pane` 
+- Le panneau central doit avoir une taille préférée de 400 par 200 (regardez dans la documentation de la classe `Pane` 
 pour connaitre la méthode à utiliser).
 
-- Les deux `HBox` doivent être alignées au centre (regarder dans la documentation de la classe `HBox`)
+- Les deux `HBox` doivent être alignées au centre (regardez dans la documentation de la classe `HBox`)
 
 - Chaque bouton aura un écouteur d'événement associé qui changera la couleur de fond du panneau central, modifiera le 
 nombre d'apparition de la couleur courante et affichera le texte correspondant dans le panel du bas.
@@ -513,7 +511,7 @@ La barre de boutons permettra de lancer, mettre en pause, redémarrer et arrête
 permettra de régler le facteur de vitesse de rebondissement de la balle. Le dernier panneau contiendra l'animation de 
 la balle.
 
-Pour déssiner la balle, on utilisera un objet du type `Circle`.
+Pour dessiner la balle, on utilisera un objet du type `Circle`.
 
 L'animation que l'on utilisera sera une simple translation de bas en haut. Pour ce faire nous utiliserons la 
 classe `TranslateTransition`. Cette classe permet de définir l'animation d'un objet en faisant une translation 
@@ -529,8 +527,7 @@ Une fois l'animation créée et correctement configurée, il suffit d'utiliser l
 
 On utilisera aussi la propriété `Rate` pour accélérer et ralentir la balle avec le slider.
 
-Comme expliqué dans le cours, le mécanisme des propriétés permet d'être informé d'un changement de valeur d'une donnée 
-membre. Ce mécanisme se base sur les écouteurs (exactement comme les boutons). Dans notre cas, nous souhaitons changer 
+Comme expliqué dans le cours, le mécanisme des propriétés permet d'être informé d'un changement de valeur d'une variable d'instance. Ce mécanisme se base sur les écouteurs (exactement comme les boutons). Dans notre cas, nous souhaitons changer 
 le `Rate` à chaque changement de la propriété `value` du slider. Cela pourrait se faire de la manière suivante :
 ```java
 slider.valueProperty().addListener(
@@ -538,7 +535,7 @@ slider.valueProperty().addListener(
         );
 ```
 
-Dans le Paquetage `exercice13`, ouvrir la classe `BouncingBall` et l'implémenter en respectant les consignes suivantes :
+Dans le Paquetage `exercice13`, ouvrez la classe `BouncingBall` et implémentez-la en respectant les consignes suivantes :
 
 - La classe devra posséder les données membres suivantes : 
     - un conteneur racine de type `VBox`
@@ -556,16 +553,16 @@ Dans le Paquetage `exercice13`, ouvrir la classe `BouncingBall` et l'implémente
     - Un objet du type `TranslateTransition`
 - Pour vous simplifier la vie, vous pouvez instancier toutes les données membres lors de leur déclaration.
 
-- Configurer votre animation pour que votre balle démarre à l'ordonnée 10 et termine à 400. Par défaut régler la durée à *1s* (soit *1000 milli-secondes*).
+- Configurez votre animation pour que votre balle démarre à l'ordonnée 10 et termine à 400. Par défaut réglez la durée à *1s* (soit *1000 milli-secondes*).
 
-- Ajouter les boutons à la `HBox`.
+- Ajoutez les boutons à la `HBox`.
 
 - Chaque bouton aura un écouteur d'événement associé qui appellera la méthode de contrôle de l'animation correspondant à son nom.
 
-- Régler le slider pour qu'il prenne des valeurs allant de 0,1 à 5.
+- Réglez le slider pour qu'il prenne des valeurs allant de 0,1 à 5.
 
-- Ajouter un écouteur sur la propriété `value` pour que la vitesse de votre animation varie en fonction de la position du curseur du slider.
+- Ajoutez un écouteur sur la propriété `value` pour que la vitesse de votre animation varie en fonction de la position du curseur du slider.
 
-- Ajouter la balle dans le `Pane`.
+- Ajoutez la balle dans le `Pane`.
 
-- Ajouter la `HBox`, le `Slider` et le `Pane` comme enfants du conteneur principal.
+- Ajoutez la `HBox`, le `Slider` et le `Pane` comme enfants du conteneur principal.
