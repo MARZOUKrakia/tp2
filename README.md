@@ -194,16 +194,16 @@ Maintenant que nous comprenons le cycle de vie d'une application JavaFX, nous al
 second programme graphique qui ne sera qu'une personnalisation de l'exercice 1.
 
 #### Exercice 4
-Pour commencer cet exercice, ouvrez la classe `MySecondJavaFxWindow` du paquetage `exercice4`. Dans la méthode `start()` 
-de cette classe, modifiez le titre de la fenêtre en "*Second Useless JavaFX Window*" puis 
-ajoutez les instructions pour  que votre fenêtre respecte les contraintes suivantes :
-* Être toujours placée au premier plan et ne pas être redimensionnable (cherchez dans la documentation des méthodes de ``Stage``),
-* Avoir une largeur fixée à 800 pixels et une hauteur fixée à 400 pixels (cherchez dans les méthodes de ``Window``).
+Pour commencer cet exercice, ouvrez la classe `MySecondJavaFxWindow` du paquetage `exercice4`, ainsi que la classe de test `TestMySecondJavaFxWindow`. 
+Activer les tests les uns après les autres et ajouter au fur et à mesure le code nécessaire dans la méthode `start()` pour les faire passer (sans oublier de pousser votre solution après chaque itération du cycle principal du workflow) de manière à : 
+* le titre de la fenêtre soit "*Second Useless JavaFX Window*"
+* qu'elle soit toujours placée au premier plan et ne pas être redimensionnable (cherchez dans la documentation de ``Stage`` parmi les méthodes qui commencent par **`set`**),
+* qu'elle ait une largeur fixée à 800 pixels et une hauteur fixée à 400 pixels (cherchez dans les méthodes héritées de ``Window`` commençant par `set`).
 
 Terminez par l'ajout d'un appel à la méthode `show()` pour afficher la fenêtre.
 
-Exécutez l'application pour vérifier les conséquences de vos modifications. Comme pour l'exercice précédent, vous devez 
-activer les tests les un après les autres et soumettre votre solution après chaque itération du cycle principal du workflow.
+Exécutez l'application pour vérifier les conséquences de vos modifications. 
+
 
 ##### Remarque
 La taille de la fenêtre se définit rarement directement comme dans cet exercice. En général, on la laisse s'adapter à la 
