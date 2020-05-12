@@ -136,12 +136,16 @@ celle prenant un ``String`` en paramètre.
 #### Exercice 2
 
 Allez dans le paquetage `exercice2` et ouvrir la classe `ApplicationLifeCycle`, puis :
-* ajoutez un constructeur sans paramètre à cette classe, se contentant d'afficher le message "*constructeur ApplicationLifeCycle()*"
+* complétez le constructeur sans paramètre de cette classe, par l'affichage du message "*constructeur ApplicationLifeCycle()*" (pensez au raccourci `sout` d'IntelliJ)
 
 * dans `start()` :
-  - ajoutez l'affichage du message "*start() : avant show stage*" avant l'appel de `show()`
+  - complétez la méthode en donnant le titre "*Application Life Cycle*" à la fenêtre
   
-  - ajoutez l'affichage du message "*start() : après show stage*" après l'appel de `show()`
+  - ajoutez l'affichage du message "*start() : avant show stage*"
+  
+  - faire appel à la méthode `show()` de `Stage` pour afficher la fenêtre
+  
+  - ajoutez l'affichage du message "*start() : après show stage*"
 
 * redéfinissez la méthode `init()` de la classe `Application`, en se contenant d'afficher le message "*init()*"
 
@@ -153,7 +157,7 @@ avant et après l'appel de `launch()`
 Puis exécutez (et testez) cette classe, sans en fermer la fenêtre.
 
 Remarquez que l'affichage s'arrête à celui **après** le `show()` qui a rendu visible la fenêtre. À ce stade, la 
-méthode `start()` est terminée. Java (FX) attend désormais que la fenêtre de l'application soit fermée.
+méthode `start()` est déjà terminée. Java (FX) attend désormais que la fenêtre de l'application soit fermée.
 
 Fermez la fenêtre et observez que la méthode `stop()` est alors appelée, ce qui met fin à notre application, 
 puis que les instructions suivant le `launch()` de la méthode `main()` sont exécutées ensuite.
