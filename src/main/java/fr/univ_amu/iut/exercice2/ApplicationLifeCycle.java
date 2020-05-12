@@ -9,9 +9,7 @@ public class ApplicationLifeCycle extends Application {
     }
 
     public static void main(String[] args) {
-        System.out.println("main() : avant launch");
         launch(args);
-        System.out.println("main() : après launch");
     }
 
     @Override
