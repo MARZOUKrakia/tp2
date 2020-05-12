@@ -11,11 +11,16 @@
     * Consulter et/ou créér des [issues](https://github.com/IUTInfoAix-M2105/tp2/issues).
     * [Email](mailto:sebastien.nedjar@univ-amu.fr) pour une question d'ordre privée, ou pour convenir d'un rendez-vous physique.
 
-## TP 2 : Premiers pas avec JavaFX 8.0 [![Build Status](https://travis-ci.com/IUTInfoAix-M2105/tp2.svg?token=zPXgu159amQhEb4ShTxW)](https://travis-ci.com/IUTInfoAix-M2105/tp2)
+## TP 2 : Premiers pas avec JavaFX 11 [![Build Status](https://travis-ci.com/IUTInfoAix-M2105/tp2.svg?token=zPXgu159amQhEb4ShTxW)](https://travis-ci.com/IUTInfoAix-M2105/tp2)
 
-JavaFX 8.0 regroupe un ensemble d'API de Java 8 Standard Edition permettant le développement rapide d'applications graphiques modernes (aussi bien que des jeux 3D !).
-JavaFX 8.0 est tellement riche que sa [documentation](https://docs.oracle.com/javase/8/javafx/api/toc.htm) se trouve à part de celle de 
-[Java 8](https://docs.oracle.com/javase/8/docs/api/index.html?overview-summary.html) (qui inclut celle de ses prédécesseurs AWT et Swing), bien qu'il fasse partie intégrante de Java 8.
+**Avant propos :** à l'instar du TP précédent qui reposait essentiellement sur les fonctionnalités de java 8 bien que vous avez développé avec le JDK 11, ce TP repose lui aussi essentiellement sur JavaFX 8.0 alors que nous utiliserons la version JavaFX 11.
+
+Depuis sa version 8.0, JavaFX regroupe un ensemble d'API de Java Standard Edition permettant le développement rapide d'applications graphiques modernes (aussi bien que des jeux 3D !).
+JavaFX 8.0 était déjà tellement riche que sa 
+<!-- [documentation](https://docs.oracle.com/javase/8/javafx/api/toc.htm) -->
+a été placée à part de celle de [Java 8](https://docs.oracle.com/javase/8/docs/api/index.html?overview-summary.html) (qui inclut celle de ses prédécesseurs AWT et Swing), bien qu'il fasse partie intégrante de Java 8.
+
+Depuis sa version 11, JavaFX est open-source et n'est plus seulement développé par Oracle mais par toute une communauté et dispose de son propre [site de référence](https://openjfx.io/), sur lequel on trouvera la [documentation de la version 11](https://openjfx.io/javadoc/11/) et des suivantes (la dernière version étant la 14).
 
 Ce TP est l'occasion d'un premier contact avec cet environnement.
 
