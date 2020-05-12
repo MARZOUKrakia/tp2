@@ -20,7 +20,7 @@ JavaFX 8.0 était déjà tellement riche que sa
 <!-- [documentation](https://docs.oracle.com/javase/8/javafx/api/toc.htm) -->
 documentation a été placée à part de celle de [Java 8](https://docs.oracle.com/javase/8/docs/api/index.html?overview-summary.html) (qui inclut celle de ses prédécesseurs AWT et Swing), bien qu'il fasse partie intégrante de Java 8.
 
-Depuis sa version 11, JavaFX est open-source et n'est plus seulement développé par Oracle mais par toute une communauté et dispose de son propre [site de référence](https://openjfx.io/), sur lequel on trouvera la [documentation de la version 11](https://openjfx.io/javadoc/11/) et des suivantes (la dernière version étant la 14).
+Depuis sa version 11, JavaFX est open-source et n'est plus seulement développé par Oracle mais par toute une communauté et dispose de son propre [site de référence](https://openjfx.io/), sur lequel on trouvera la [documentation de la version 11](https://openjfx.io/javadoc/11/) et des suivantes (la dernière version étant la 14). Vous devrez donc par la suite consulter la documentation de l'API de Java 11 ainsi que de JavaFX 11.
 
 Ce TP est l'occasion d'un premier contact avec cet environnement.
 
@@ -102,6 +102,8 @@ les parties *Methods inherited from ...*.
 Pour valider cet exercice, supprimez ou mettez en commentaires l'annotation `@Disabled` dans la classe `TestMyFirstJavaFXWindow` et lancez les tests 
 pour vérifier que tout est correct.
 
+Ceci fait, penser à *commit*er vos modifications et de pousser votre dépôt sur GitHub.
+
 ### Cycle de vie d'une application
 
 Étudions rapidement le cycle de vie d'une application JavaFX (figurant dans la 
@@ -162,6 +164,8 @@ méthode `start()` est déjà terminée. Java (FX) attend désormais que la fen�
 Fermez la fenêtre et observez que la méthode `stop()` est alors appelée, ce qui met fin à notre application, 
 puis que les instructions suivant le `launch()` de la méthode `main()` sont exécutées ensuite.
 
+À nouveau, pour terminer l'exercice n'oubliez d'en activer tous les tests et de vous assurer qu'ils passent avec succès, vant de *commit*er vos modifications et de pousser votre dépôt sur GitHub. Ces étapes sont implicites dans la suite et ne seront plus rappelées.
+
 
 ### Qui fait quoi ?
 
@@ -173,12 +177,12 @@ synchroniser, et partagent ensemble la mémoire du processus et ont donc accès 
 
 #### Exercice 3
 
-Ouvrez la classe ``WhoIsWho``, puis :
-1. ouvrez la documentation de la classe `Thread` de Java8, qui est la super classe des threads de la JVM, et recherchez-y :
-    * la méthode statique qui renvoie le `Thread` courant,
-    * la méthode d'instance qui renvoie un `String` contenant le nom du thread (oui, ils ont un petit nom)
+Ouvrez la classe ``WhoIsWho`` du paquet `exercice3`, puis :
+1. ouvrez la documentation de la classe `Thread` (du paquet `java.lang` du module `java.base` de Java 11, et non pas de JavaFX), qui est la super classe des threads de la JVM, et recherchez-y :
+    * la méthode **statique** qui renvoie le `Thread` courant,
+    * la méthode d'**instance** qui renvoie un `String` contenant le nom de cet objet Thread (oui, ils ont un petit nom)
 
-2. faites en sorte que chaque méthode du cycle de vie ait un affichage identique à celui de l'exercice 2. 
+2. faites en sorte que chaque méthode du cycle de vie (y compris de la méthode `main()`) ait un affichage identique à celui de l'exercice 2. 
 
 3. préfixez chaque affichage de l'application par la chaîne ``[``*nom*``]`` suivi d'un espace, où *nom* est le nom du 
 thread courant (celui qui fait appel au ``println``).
