@@ -42,31 +42,37 @@ public class TestMySecondJavaFXWindow {
         robot.release(new MouseButton[]{});
     }
 
+    @Disabled
     @Test
     public void should_initialize_stage_with_correct_title() {
         assertEquals("Second Useless JavaFX Window", stage.getTitle());
     }
 
+    @Disabled
     @Test
     public void should_initialize_stage_is_always_on_top() {
         assertTrue(stage.alwaysOnTopProperty().get());
     }
 
+    @Disabled
     @Test
     public void should_initialize_stage_is_not_resizable() {
         assertFalse(stage.resizableProperty().get());
     }
 
+    @Disabled
     @Test
     public void should_initialize_stage_with_height_of_400() {
         assertEquals(400, stage.getHeight());
     }
 
+    @Disabled
     @Test
     public void should_initialize_stage_with_width_of_800() {
         assertEquals(800, stage.getWidth());
     }
 
+    @Disabled
     @Test
     public void should_initialize_stage_is_showing() {
         assertTrue(stage.isShowing());
