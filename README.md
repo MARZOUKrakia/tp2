@@ -73,12 +73,11 @@ affichage : `javafx.application.Application` et `javafx.stage.Stage`.
 
 Ainsi que la déclaration de notre classe `MyFirstJavaFXWindow` le montre avec l'emploi de `extends Application`, toute application JavaFX doit être une sous-classe de `Application`.
 
-Dans un navigateur, ouvrez la documentation sur JavaFX 11, puis de la classe `Application` qui appartient au package `javafx.application` du module `javafx.graphics`. On observe que cette classe est **abstraite**, 
-ce qui signifie que notre classe **concrète** `MyFirstJavaFXWindow` qui l'étend doit implémenter (redéfinir) les méthodes 
+Dans un navigateur, ouvrez la documentation sur JavaFX 11, puis de la classe `Application` qui appartient au paquet `javafx.application` du module `javafx.graphics`. On observe que cette classe est **abstraite**, 
+ce qui signifie que notre classe **concrète** `MyFirstJavaFXWindow` qui l'étend doit implémenter (redéfinir) toutes les méthodes 
 abstraites de sa classe parente `Application`.
 
-Dans la partie *Method Summary* de la documentation, on remarque que la seule méthode abstraite d'`Application` est la 
-méthode `start()`.  C'est donc la seule méthode que notre classe doit forcément implémenter pour devenir concrète (et donc 
+Dans la partie *Method Summary* (et l'onglet *Abstract Methods*) de la documentation, on remarque qu'`Application` ne possède qu'une seule méthode abstraite : la méthode `start()`.  C'est donc la seule méthode que notre classe doit forcément implémenter pour devenir concrète (et donc 
 être instanciable).
 
 Avant de s'intéresser à son contenu, observons que la classe `MyFirstJavaFXWindow` est une classe 
@@ -86,7 +85,7 @@ exécutable car elle définit la méthode `main()`. Celle-ci se contente d'appel
 les arguments de la ligne de commande. `launch()` est une méthode **statique** de la classe `Application`. Son rôle est 
 de créer une instance de notre `Application` et de la démarrer.
 
-La méthode `start()` prend en paramètre une instance de la classe `Stage` qui est créée par JavaFX dans `launch()`, 
+La méthode `start()` prend en paramètre une instance de la classe `Stage` qui est automatiquement créée par JavaFX dans `launch()`, 
 et qui représente la fenêtre principale de notre application (qui pourra en créer d'autres si besoin).
 Dans notre application, cette fenêtre est vide, alors qu'elle devrait être dotée d'une **scène** contenant des composants,
  comme nous le verrons plus loin ! Pour débuter, nous nous sommes contentés d'en définir le titre avec la méthode 
