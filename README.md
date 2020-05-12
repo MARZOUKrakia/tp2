@@ -189,7 +189,7 @@ thread courant (celui qui fait appel au ``println``).
 Exécutez ensuite l'application pour constater que pas moins de 3 threads interviennent à différentes étapes du cycle de vie de cette si simple application.
 
 
-### Premières applications graphiques : composants et événements
+### Quelques éléments de personnalisation d'une fenêtre
 Maintenant que nous comprenons le cycle de vie d'une application JavaFX, nous allons pouvoir commencer à écrire un 
 second programme graphique qui ne sera qu'une personnalisation de l'exercice 1.
 
@@ -212,13 +212,15 @@ La taille de la fenêtre se définit rarement directement comme dans cet exercic
 #### Exercice 5
 
 Modifiez le code de l'application qui vous est donné de manière à changer le style de la fenêtre pour qu'elle ne soit 
-pas décorée. Ajoutez les propriétés que les test vous imposent pour être totalement validées.
+pas décorée (rechercher parmi les méthodes relatives à du style). Ajoutez les propriétés que les test vous imposent pour être totalement validées.
 
 Puisqu'elle n'est plus décorée, la fenêtre qui s'affiche ne dispose plus du bouton permettant de terminer l'application !
 Néanmoins, sur un bureau comme le vôtre qui dispose d'une barre de tâches, un simple clic droit sur l'icône 
 correspondante nous donne accès à un menu contextuel permettant de la fermer. Un autre moyen est de cliquer sur le carré 
 rouge de la partie *Run:* en bas à gauche de la fenêtre IntelliJ, aussi présent en haut à droite.
 
+
+### Premières applications graphiques : composants et événements
 Pour placer des composants dans une fenêtre, nous utiliserons principalement le conteneur `BorderPane`.
 Ce conteneur permet de placer des composants enfants dans cinq zones : `Top`, `Bottom`, `Left`, `Right` et `Center`.
 
