@@ -18,7 +18,7 @@
 Depuis sa version 8.0, JavaFX regroupe un ensemble d'API de Java Standard Edition permettant le développement rapide d'applications graphiques modernes (aussi bien que des jeux 3D !).
 JavaFX 8.0 était déjà tellement riche que sa 
 <!-- [documentation](https://docs.oracle.com/javase/8/javafx/api/toc.htm) -->
-a été placée à part de celle de [Java 8](https://docs.oracle.com/javase/8/docs/api/index.html?overview-summary.html) (qui inclut celle de ses prédécesseurs AWT et Swing), bien qu'il fasse partie intégrante de Java 8.
+documentation a été placée à part de celle de [Java 8](https://docs.oracle.com/javase/8/docs/api/index.html?overview-summary.html) (qui inclut celle de ses prédécesseurs AWT et Swing), bien qu'il fasse partie intégrante de Java 8.
 
 Depuis sa version 11, JavaFX est open-source et n'est plus seulement développé par Oracle mais par toute une communauté et dispose de son propre [site de référence](https://openjfx.io/), sur lequel on trouvera la [documentation de la version 11](https://openjfx.io/javadoc/11/) et des suivantes (la dernière version étant la 14).
 
