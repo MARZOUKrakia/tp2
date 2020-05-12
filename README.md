@@ -15,12 +15,11 @@
 
 **Avant propos :** à l'instar du TP précédent qui reposait essentiellement sur les fonctionnalités de java 8 bien que vous avez développé avec le JDK 11, ce TP repose lui aussi essentiellement sur JavaFX 8.0 alors que nous utiliserons la version JavaFX 11. Puisque depuis sa version 9, Java (et JavaFX) a été rendu modulaire, les explications qui suivent se basent sur JavaFX 11, sans en utiliser les nouveautés qui sortent du cadre de cet enseignement.
 
-Depuis sa version 8.0, JavaFX regroupe un ensemble d'API de Java Standard Edition permettant le développement rapide d'applications graphiques modernes (aussi bien que des jeux 3D !).
+Dans sa version 8.0, JavaFX regroupait un ensemble d'API de Java 8 Standard Edition permettant le développement rapide d'applications graphiques modernes (aussi bien que des jeux 3D !).
 JavaFX 8.0 était déjà tellement riche que sa 
-<!-- [documentation](https://docs.oracle.com/javase/8/javafx/api/toc.htm) -->
 documentation a été placée à part de celle de [Java 8](https://docs.oracle.com/javase/8/docs/api/index.html?overview-summary.html) (qui inclut celle de ses prédécesseurs AWT et Swing), bien qu'il fasse partie intégrante de Java 8.
 
-Depuis sa version 11, JavaFX est open-source et n'est plus seulement développé par Oracle mais par toute une communauté et dispose de son propre [site de référence](https://openjfx.io/), sur lequel on trouvera la [documentation de la version 11](https://openjfx.io/javadoc/11/) et des suivantes (la dernière version étant la 14). Vous devrez donc par la suite consulter la documentation de l'API de Java 11 ainsi que de JavaFX 11.
+Depuis sa version 11, JavaFX est devenu un composant additionnel du JDK, sous la forme d'un projet open-source qui n'est plus seulement développé par Oracle mais par toute une communauté. JavaFX dispose désormais de son propre [site de référence](https://openjfx.io/), à partir duquel on peut télécharger le SDK JavaFX et sur lequel on trouvera la [documentation de la version 11](https://openjfx.io/javadoc/11/) et des suivantes (la dernière version étant la 14). Vous devrez donc par la suite consulter la documentation de l'API de Java 11 ainsi que de JavaFX 11.
 
 Ce TP est l'occasion d'un premier contact avec cet environnement.
 
