@@ -13,7 +13,7 @@
 
 ## TP 2 : Premiers pas avec JavaFX 11 [![Build Status](https://travis-ci.com/IUTInfoAix-M2105/tp2.svg?token=zPXgu159amQhEb4ShTxW)](https://travis-ci.com/IUTInfoAix-M2105/tp2)
 
-**Avant propos :** à l'instar du TP précédent qui reposait essentiellement sur les fonctionnalités de java 8 bien que vous avez développé avec le JDK 11, ce TP repose lui aussi essentiellement sur JavaFX 8.0 alors que nous utiliserons la version JavaFX 11.
+**Avant propos :** à l'instar du TP précédent qui reposait essentiellement sur les fonctionnalités de java 8 bien que vous avez développé avec le JDK 11, ce TP repose lui aussi essentiellement sur JavaFX 8.0 alors que nous utiliserons la version JavaFX 11. Puisque depuis sa version 9, Java (et JavaFX) a été rendu modulaire, les explications qui suivent se basent sur JavaFX 11, sans en utiliser les nouveautés qui sortent du cadre de cet enseignement.
 
 Depuis sa version 8.0, JavaFX regroupe un ensemble d'API de Java Standard Edition permettant le développement rapide d'applications graphiques modernes (aussi bien que des jeux 3D !).
 JavaFX 8.0 était déjà tellement riche que sa 
@@ -71,15 +71,14 @@ public class MyFirstJavaFXWindow extends Application {
 Les deux premiers imports sont nécessaires pour utiliser les noms courts des deux classes indispensables à cet 
 affichage : `javafx.application.Application` et `javafx.stage.Stage`.
 
-Ainsi que la déclaration de notre classe `MyFirstJavaFXWindow` le montre, toute application JavaFX doit être une 
-sous-classe de `Application`.
+Ainsi que la déclaration de notre classe `MyFirstJavaFXWindow` le montre avec l'emploi de `extends Application`, toute application JavaFX doit être une sous-classe de `Application`.
 
-Dans un navigateur, ouvrez la documentation sur la classe `Application`. On observe que cette classe est **abstraite**, 
+Dans un navigateur, ouvrez la documentation sur JavaFX 11, puis de la classe `Application` qui appartient au package `javafx.application` du module `javafx.graphics`. On observe que cette classe est **abstraite**, 
 ce qui signifie que notre classe **concrète** `MyFirstJavaFXWindow` qui l'étend doit implémenter (redéfinir) les méthodes 
 abstraites de sa classe parente `Application`.
 
 Dans la partie *Method Summary* de la documentation, on remarque que la seule méthode abstraite d'`Application` est la 
-méthode `start()`.  C'est la seule méthode que notre classe doit forcément implémenter pour devenir concrète (et donc 
+méthode `start()`.  C'est donc la seule méthode que notre classe doit forcément implémenter pour devenir concrète (et donc 
 être instanciable).
 
 Avant de s'intéresser à son contenu, observons que la classe `MyFirstJavaFXWindow` est une classe 
@@ -96,12 +95,12 @@ Dans notre application, cette fenêtre est vide, alors qu'elle devrait être dot
 Ouvrez la documentation sur la classe `Stage`.
  
 Remarquez que cette classe étend la classe `Window` qui est plus générale. `Window` définit les bases de toute fenêtre de 
-premier niveau, ce qui comprend aussi les *popups*. La classe `Stage` dispose de nombreuses méthodes (ou redéfinitions) 
+premier niveau (*top level JavaFX container*), ce qui comprend aussi les *popups*. La classe `Stage` dispose de nombreuses méthodes (ou redéfinitions) 
 qui lui sont propres et indiquées dans la partie *Method Summary* de sa documentation, ainsi que des méthodes héritées 
 (et non redéfinies) de sa super-classe `Window` (et, par transitivité, de la super-classe `Object`) indiquées dans 
 les parties *Methods inherited from ...*.
 
-Pour valider cet exercice, supprimez l'annotation `@Ignore` dans la classe `TestMyFirstJavaFXWindow` et lancez les tests 
+Pour valider cet exercice, supprimez ou mettez en commentaires l'annotation `@Disabled` dans la classe `TestMyFirstJavaFXWindow` et lancez les tests 
 pour vérifier que tout est correct.
 
 ### Cycle de vie d'une application
