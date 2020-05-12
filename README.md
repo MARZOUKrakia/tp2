@@ -181,13 +181,12 @@ Ouvrez la classe ``WhoIsWho`` du paquet `exercice3`, puis :
     * la méthode **statique** qui renvoie le `Thread` courant,
     * la méthode d'**instance** qui renvoie un `String` contenant le nom de cet objet Thread (oui, ils ont un petit nom)
 
-2. faites en sorte que chaque méthode du cycle de vie (y compris de la méthode `main()`) ait un affichage identique à celui de l'exercice 2. 
+2. faites en sorte que toutes les méthodes (y compris le constructeur) aient un affichage identique à celui de l'exercice 2. 
 
-3. préfixez chaque affichage de l'application par la chaîne ``[``*nom*``]`` suivi d'un espace, où *nom* est le nom du 
+3. préfixez ces affichages par la chaîne ``[``*nom*``]`` suivi d'un espace, où *nom* est le nom du 
 thread courant (celui qui fait appel au ``println``).
   
-Exécutez ensuite l'application pour vérifier quels threads interviennent à quelle étape du cycle de vie de cette si 
-simple application.
+Exécutez ensuite l'application pour constater que pas moins de 3 threads interviennent à différentes étapes du cycle de vie de cette si simple application.
 
 
 ### Premières applications graphiques : composants et événements
