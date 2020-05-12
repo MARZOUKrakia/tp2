@@ -50,7 +50,8 @@ public class TestWhoIsWho {
     @Test
     public void test_life_cycle_output() {
         verify(out).println("[JavaFX Application Thread] constructeur WhoIsWho()");
-        verify(out).println("[JavaFX Application Thread] start()");
+        verify(out).println("[JavaFX Application Thread] start() : avant show stage");
+        verify(out).println("[JavaFX Application Thread] start() : après show stage");
     }
 
 }
