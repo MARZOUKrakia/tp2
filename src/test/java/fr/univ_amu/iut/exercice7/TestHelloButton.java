@@ -62,6 +62,11 @@ public class TestHelloButton {
     }
 
     @Test
+    public void should_initialize_stage_is_showing() {
+        assertTrue(stage.isShowing());
+    }
+
+    @Test
     public void should_initialize_stage_with_height_of_100() {
         assertEquals(100, stage.getHeight());
     }
@@ -74,11 +79,6 @@ public class TestHelloButton {
     @Test
     public void should_initialize_button_with_text_hello() {
         verifyThat("#buttonHello", hasText("Hello !"));
-    }
-
-    @Test
-    public void should_initialize_stage_is_showing() {
-        assertTrue(stage.isShowing());
     }
 
     @Test
