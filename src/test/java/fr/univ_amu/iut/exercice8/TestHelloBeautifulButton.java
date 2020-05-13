@@ -34,7 +34,7 @@ public class TestHelloBeautifulButton {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                TestHelloBeautifulButton.this.stage = new Stage(StageStyle.UNDECORATED);
+                TestHelloBeautifulButton.this.stage = new Stage();
                 try {
                     FxToolkit.setupStage((sta) -> {
                         try {
@@ -61,6 +61,12 @@ public class TestHelloBeautifulButton {
     @Test
     public void should_initialize_stage_with_correct_title() {
         assertEquals("Hello !", stage.getTitle());
+    }
+
+    @Disabled
+    @Test
+    public void should_initialize_stage_is_showing() {
+        assertTrue(stage.isShowing());
     }
 
     @Disabled
@@ -94,12 +100,6 @@ public class TestHelloBeautifulButton {
         verifyThat("#buttonHello", (Button node) -> ((ImageView) node.getGraphic()).getImage() != null);
         verifyThat("#buttonHello", (Button node) -> ((ImageView) node.getGraphic()).getImage().getHeight() == 150);
         verifyThat("#buttonHello", (Button node) -> ((ImageView) node.getGraphic()).getImage().getWidth() == 150);
-    }
-
-    @Disabled
-    @Test
-    public void should_initialize_stage_is_showing() {
-        assertTrue(stage.isShowing());
     }
 
 }
