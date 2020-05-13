@@ -29,7 +29,7 @@ public class TestMyUndecoratedJavaFXWindow {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                TestMyUndecoratedJavaFXWindow.this.stage = new Stage(StageStyle.UNDECORATED);
+                TestMyUndecoratedJavaFXWindow.this.stage = new Stage();
                 try {
                     FxToolkit.setupStage((sta) -> {
                         try {
