@@ -33,7 +33,7 @@ public class TestHelloButton {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                TestHelloButton.this.stage = new Stage(StageStyle.UNDECORATED);
+                TestHelloButton.this.stage = new Stage();
                 try {
                     FxToolkit.setupStage((sta) -> {
                         try {
