@@ -32,7 +32,7 @@ public class TestHelloLabel {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                TestHelloLabel.this.stage = new Stage(StageStyle.UNDECORATED);
+                TestHelloLabel.this.stage = new Stage();
                 try {
                     FxToolkit.setupStage((sta) -> {
                         try {
